@@ -1,0 +1,76 @@
+PROTOCOLO DE APLICAÇÃO: PROTOCOLO BATCHAT
+CATEGORIA SUCESSO/AUTORIZADO ( 1XX ): 
+
++100 - Sucesso.
++101 - Servidor iniciado.
++102 - Nome de usuário disponível.
++103 - Usuário cadastrado
++104 - Cadastro realizado com sucesso 
++105 - Logado com sucesso 
++106 - Não existe esse nome na lista de contatos
++107 - Contato adicionado com sucesso.
++108 - Contato removido com sucesso.
++120 - Sala encontrada
++130 - Saiu da aplicação com sucesso .
++150 - Você está na sala
++160 - Sessão finalizada.
++171 - Sala criada com sucesso.
+
+
+CATEGORIA ERRO/NÃO AUTORIZADO ( 6XX ):
+
+
+-601 - Usuário já existente 
+-602 - Usuário inexistente
+-603 - Erro durante o cadastro
+-604 - Erro na formatação da linha
+-605 - Erro na senha ou no usuário
+-606 - Já existe esse nome na sua lista de contatos
+-610 - Você não pode adicionar você mesmo mesmo
+-620 - Não existe essa sala
+-632 - Não existe esse contato na lista
+-650 - Você não está na sala.
+
+
+
+
+
+
+1.CONSULTAR_NOME(Nome): +102 - Nome de usuário disponível, -601 - Usuário já existente.
+
+2.CADASTRAR_USUARIO(Nome,senha): +104 - Cadastro realizado com sucesso ,
+-601 Usuário já existente, -603 - Erro durante o cadastro.
+
+3.VERIFICAR_LOGIN(Nome,senha):  +105 - Logado com sucesso, -604 - Erro na formatação,
+-605 - Erro na senha ou no usuário
+
+4.SAIR_PROGRAMA(resposta): +130 - Saiu da aplicação com sucesso .
+
+5.CONSULTAR_USUARIO(Nome): +103 - Usuário cadastrado, -602 - Usuário inexistente.
+
+6.VERIFICAR_AMIGO_ADICIONADO(Nome,contato): +106 - Não existe esse nome na lista de contatos,
+-606 - Já existe esse nome na sua lista de contatos, -610 - Você não pode adicionar você mesmo mesmo.
+
+7.ADICIONAR_CONTATO(Nome_arquivo,Contato): +107 - Contato adicionado com sucesso.
+
+8.CRIAR_SALA(Usuario,Nome_sala): Sala {Nome_sala} +171 , código da sala. - Sala criada com sucesso.
+
+9.VERIFICAR_SALA(codigo): +120 - Sala encontrada, -620 - Não existe essa sala.
+
+10.ENTRAR_NA_SALA(codigo,nome,codigo_conexao): +150 - Você está na sala, -650 - Você não está na sala.
+
+11.ENCERRAR_SESSAO(Codigo_conexão,usuario): +160 - Sessão finalizada.
+
+12.REMOVER_AMIGO(Usuario,contato): +108 - Contato removido com sucesso, -632 - Não existe esse contato na lista.
+
+-------------------------------------------------------------------------------------
+1.1 CONSULTAR_CODIGO_CONEXAO(): Aqui é resgatado o proprio código de conexão IP/Porta.
+
+1.2 LISTAR_CONTATOS(Usuario): Aqui resgata a lista de contatos do usuário cadastrado.
+
+1.3 ENVIAR_MENSAGEM_SALA(Nome,Mensagem,Codigo_sala,Codigo_conexao) - Aqui envia mensagem para a sala
+
+
+
+
+       
