@@ -24,7 +24,7 @@ class Pilha:
             self.tamanho -= 1 # Decrementa o tamanho da pilha
             return no.dado # Retorna o dado do nó removido
         else:
-            raise IndexError("Pilha Vazia") # Levanta uma excessão caso a pilha esteja vazia
+            raise IndexError("A sua pilha está vazia!") # Levanta uma excessão caso a pilha esteja vazia
         
     def topinho(self):
         if self.tamanho >0:
@@ -37,6 +37,14 @@ class Pilha:
             return False
         else:
             return True
+    
+    def desempilhar_tudo(self):
+        try:
+            while self.tamanho >= 0:
+                    elemento = self.desempilhar()
+                    print(f"O elemento {elemento} foi desempilhado.")
+        except IndexError as e:
+            print(e)
         
     def __repr__(self):
         r = ""

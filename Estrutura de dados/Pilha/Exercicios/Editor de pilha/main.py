@@ -10,6 +10,7 @@ def exibir_menu(pilha):
     print("(t) Tamanho")
     print("(o) Obter elemento do topo")
     print("(p) Imprimir pilha")
+    print("(z) Desempilhar tudo")
     print("(s) Sair")
     print("=====================================")
 
@@ -44,6 +45,10 @@ def main():
 
         elif opcao == "p":
             print(pilha)
+        
+        elif opcao == "z":
+            print("Desempilhando...")
+            pilha.desempilhar_tudo()
 
         elif opcao == "s":
             print("saindo...")
