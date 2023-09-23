@@ -45,6 +45,16 @@ class Pilha:
                     print(f"O elemento {elemento} foi desempilhado.")
         except IndexError as e:
             print(e)
+    
+    def inverter(self):
+        pilha_aux = Pilha()
+        try:
+            while self.tamanho > 0:
+                elemento = self.desempilhar()
+                pilha_aux.empilhar(elemento)
+                return pilha_aux
+        except IndexError as e:
+            print(e)
         
     def __repr__(self):
         r = ""

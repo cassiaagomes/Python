@@ -11,6 +11,7 @@ def exibir_menu(pilha):
     print("(o) Obter elemento do topo")
     print("(p) Imprimir pilha")
     print("(z) Desempilhar tudo")
+    print("(i) Inverter a pilha")
     print("(s) Sair")
     print("=====================================")
 
@@ -49,6 +50,10 @@ def main():
         elif opcao == "z":
             print("Desempilhando...")
             pilha.desempilhar_tudo()
+
+        elif opcao == "i":
+            pilha.inverter()
+            print(pilha)
 
         elif opcao == "s":
             print("saindo...")
