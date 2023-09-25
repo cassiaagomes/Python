@@ -29,7 +29,7 @@ def main():
            print(f"Você empilhou o  número: {novo_dado}.")
 
         elif opcao == "d":
-            questao = input(f"O número que se encontra no topo é o {pilha.topo()}. Deseja desempilhar? [s/n] ").lower
+            questao = input(f"O número que se encontra no topo é o {pilha.topinho()}. Deseja desempilhar? [s/n] ").lower()
             if questao == "s":
                 pilha.desempilhar()
                 print(f"O número foi desempilhado. ")
@@ -54,6 +54,7 @@ def main():
         elif opcao == "i":
             pilha.inverter()
             print(pilha)
+        
 
         elif opcao == "s":
             print("saindo...")
