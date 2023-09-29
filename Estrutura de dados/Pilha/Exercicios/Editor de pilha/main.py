@@ -1,4 +1,4 @@
-from pilha import Pilha  # Importe a classe Pilha do seu arquivo Pilha.py
+from pilha import Pilha
 
 def exibir_menu(pilha):
     print("\nEditor de Pilha v1.2")
@@ -16,7 +16,7 @@ def exibir_menu(pilha):
     print("=====================================")
 
 def main():
-    pilha = Pilha()  # Crie uma instância da classe Pilha
+    pilha = Pilha() 
     opcao = ""
 
     while opcao != "s":
